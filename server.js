@@ -18,9 +18,10 @@ app.use("/tweets", tweetRoute);
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/twitter", { useMongoClient: true }, (err) => {
     if (err) console.error(err);
-    app.listen(port, () => {
-        console.log("Listening on " + port);
-    });
+});
+
+app.listen(port, () => {
+    console.log("Listening on " + port);
 });
 
 
